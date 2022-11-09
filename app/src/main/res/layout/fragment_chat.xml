@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/abl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/spacing_8"
+            app:elevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_back"
+                        android:padding="@dimen/spacing_8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivInterlocutorPhoto"
+                        android:layout_width="@dimen/size_32"
+                        android:layout_height="@dimen/size_32"
+                        tools:src="@tools:sample/avatars"
+                        android:scaleType="centerInside"
+                        android:adjustViewBounds="true"
+                        app:shapeAppearanceOverlay="@style/Anymaster.Styles.ImageView.ShapeAppearance"
+                        android:layout_marginStart="@dimen/spacing_8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivBack"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvInterlocutorName"
+                        style="@style/Anymaster.Styles.MaterialTextView.Medium.14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/spacing_12"
+                        app:layout_constraintStart_toEndOf="@id/ivInterlocutorPhoto"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Daniel Moris" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/Anymaster.Styles.MaterialTextView.Regular.12"
+                        android:id="@+id/tvInterlocutorStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/verified"
+                        app:drawableStartCompat="@drawable/ic_verify"
+                        android:drawablePadding="@dimen/spacing_6"
+                        app:layout_constraintStart_toStartOf="@id/tvInterlocutorName"
+                        app:layout_constraintTop_toBottomOf="@id/tvInterlocutorName" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_dots"
+                        android:paddingHorizontal="@dimen/spacing_16"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvOffer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="@dimen/size_0"
+                app:strokeColor="@color/gray"
+                app:strokeWidth="@dimen/size_1"
+                app:cardCornerRadius="@dimen/size_0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/abl">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/spacing_14"
+                    android:paddingVertical="@dimen/spacing_12">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/Anymaster.Styles.MaterialTextView.Regular.12"
+                        android:id="@+id/tvOfferName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        app:layout_constraintBottom_toTopOf="@id/tvOfferPrice"
+                        app:layout_constraintEnd_toStartOf="@id/btnChangeOffer"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Cleaning of a two-room apartment" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/Anymaster.Styles.MaterialTextView.Medium.14"
+                        android:id="@+id/tvOfferPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvOfferName"
+                        app:layout_constraintStart_toStartOf="@id/tvOfferName"
+                        tools:text="€1 498,00" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Anymaster.Styles.MaterialButton.MainButton"
+                        android:id="@+id/btnChangeOffer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/change_offer"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvConversation"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingHorizontal="@dimen/spacing_14"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:stackFromEnd="true"
+            tools:listitem="@layout/item_chat_first_message"
+            tools:itemCount="1"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/clWriteMessage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/abl" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clWriteMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/spacing_14" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gTop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/spacing_16" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gEnd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/spacing_14" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/spacing_16" />
+
+            <View
+                android:id="@+id/messageDivider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1"
+                android:background="@color/gray"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/Anymaster.Styles.MaterialTextView.Regular.12"
+                android:id="@+id/tvEditMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:drawableStartCompat="@drawable/ic_edit"
+                android:drawableTint="@color/secondary_gray"
+                android:text="@string/edit_message"
+                android:textColor="@color/secondary_gray"
+                app:layout_constraintStart_toStartOf="@id/gStart"
+                app:layout_constraintTop_toTopOf="@id/gTop" />
+
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/Anymaster.Styles.MaterialTextView.Regular.12"
+                android:id="@+id/tvMessageToEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/spacing_4"
+                app:layout_constraintEnd_toEndOf="@id/tilMessage"
+                app:layout_constraintTop_toBottomOf="@id/tvEditMessage"
+                app:layout_constraintStart_toStartOf="@id/gStart"
+                tools:text="Hi Daniel, my name is Eleni, I am a professional cleaner fjadfjdlfjldksfjlaksdlf;aj" />
+
+            <ImageButton
+                android:id="@+id/ibCLose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_close"
+                android:contentDescription="@string/close_edit_mode"
+                app:layout_constraintEnd_toEndOf="@id/gEnd"
+                app:layout_constraintTop_toTopOf="@id/gTop" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Anymaster.Styles.TextInputLayout"
+                android:id="@+id/tilMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:endIconTint="@color/secondary_black"
+                app:endIconDrawable="@drawable/ic_camera"
+                android:layout_marginTop="@dimen/spacing_14"
+                app:layout_goneMarginTop="@dimen/size_0"
+                app:layout_constraintBottom_toBottomOf="@id/gBottom"
+                app:layout_constraintEnd_toStartOf="@id/ibSubmit"
+                app:layout_constraintStart_toStartOf="@id/gStart"
+                app:layout_constraintTop_toBottomOf="@id/tvMessageToEdit">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    style="@style/Anymaster.Styles.TextInputEditText"
+                    android:id="@+id/tietMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/message" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/ibSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_submit"
+                android:visibility="gone"
+                android:contentDescription="@string/submit"
+                android:layout_marginStart="@dimen/spacing_14"
+                app:layout_constraintEnd_toEndOf="@id/gEnd"
+                app:layout_constraintBottom_toBottomOf="@id/gBottom"
+                app:layout_constraintStart_toEndOf="@id/tilMessage" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/gEditMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="ibCLose,tvMessageToEdit,tvEditMessage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/blur"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</FrameLayout>

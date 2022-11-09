@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Text -->
+    <style name="Anymaster.Styles.MaterialTextView.Regular" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/ibm_plex_sans</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Anymaster.Styles.MaterialTextView.Medium" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/ibm_plex_sans_semibold</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Anymaster.Styles.MaterialTextView.Regular.12" parent="Anymaster.Styles.MaterialTextView.Regular">
+        <item name="android:textSize">@dimen/text_12</item>
+        <item name="android:textColor">@color/secondary_black</item>
+    </style>
+
+    <style name="Anymaster.Styles.MaterialTextView.Regular.14" parent="Anymaster.Styles.MaterialTextView.Regular">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/secondary_black</item>
+    </style>
+
+    <style name="Anymaster.Styles.MaterialTextView.Medium.14" parent="Anymaster.Styles.MaterialTextView.Medium">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/secondary_black</item>
+    </style>
+
+    <style name="Anymaster.Styles.MaterialTextView.Medium.18" parent="Anymaster.Styles.MaterialTextView.Medium">
+        <item name="android:textSize">@dimen/text_18</item>
+        <item name="android:textColor">@color/secondary_black</item>
+    </style>
+
+    <!-- Button -->
+    <style name="Anymaster.Styles.MaterialButton.TextAppearance.Normal" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/ibm_plex_sans_semibold</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="fontWeight">600</item>
+    </style>
+
+    <style name="Anymaster.Styles.MaterialButton.ShapeAppearance" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">@dimen/size_18</item>
+        <item name="cornerSizeTopLeft">@dimen/size_18</item>
+        <item name="cornerSizeBottomRight">@dimen/size_18</item>
+        <item name="cornerSizeBottomLeft">@dimen/size_18</item>
+    </style>
+
+    <style name="Anymaster.Styles.MaterialButton.MainButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">@color/secondary_black</item>
+        <item name="android:textAppearance">
+            @style/Anymaster.Styles.MaterialButton.TextAppearance.Normal
+        </item>
+        <item name="strokeColor">@color/secondary_black</item>
+        <item name="shapeAppearance">@style/Anymaster.Styles.MaterialButton.ShapeAppearance</item>
+    </style>
+
+    <!-- Text Input Layout | Text Input Edit Text -->
+    <style name="Anymaster.Styles.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorPrimary">@color/secondary_black</item>
+        <item name="boxBackgroundColor">@color/gray</item>
+        <item name="boxStrokeWidth">@dimen/size_0</item>
+        <item name="boxCornerRadiusTopStart">@dimen/size_18</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/size_18</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/size_18</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/size_18</item>
+        <item name="endIconMode">custom</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="Anymaster.Styles.TextInputEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="fontFamily">@font/ibm_plex_sans</item>
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/secondary_black</item>
+        <item name="android:textColorHighlight">@color/secondary_gray</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:imeOptions">actionSend</item>
+        <item name="android:lines">6</item>
+        <item name="android:minLines">1</item>
+        <item name="android:maxLines">6</item>
+        <item name="maxCharacterCount">2000</item>
+        <item name="android:scrollHorizontally">false</item>
+    </style>
+
+    <!-- Image View-->
+    <style name="Anymaster.Styles.ImageView.ShapeAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>

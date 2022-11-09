@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Anymaster</string>
+    <string name="verified">Verified</string>
+    <string name="message">Message…</string>
+    <string name="change_offer">Change offer</string>
+    <string name="gets_offer">%s gets your offer for</string>
+    <string name="deal_explanation">To complete the deal, %s must accept your offer, until that you can discuss the details here</string>
+    <string name="edit_message">Edit message</string>
+    <string name="close_edit_mode">Close edit mode</string>
+    <string name="submit">Submit</string>
+    <string name="save_as_template">Save as template</string>
+    <string name="copy">Copy</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="open_camera">Open camera</string>
+    <string name="go_back">Go back</string>
+    <string name="show_more_menu">Show \'more\' menu</string>
+    <string name="select_editing_message">Select an editing message</string>
+</resources>

@@ -1,0 +1,15 @@
+object Versions {
+    const val ANDROID_GRADLE_PLUGIN = "7.2.2"
+    const val KOTLIN = "1.7.10"
+    const val HILT = "2.42"
+    const val HILT_AGP = "2.42"
+    const val CORE = "1.8.0"
+    const val FRAGMENT = "1.5.2"
+    const val APPCOMPAT = "1.5.0"
+    const val MATERIAL = "1.4.0"
+    const val RECYCLERVIEW = "1.2.1"
+    const val CONSTRAINT_LAYOUT = "2.1.4"
+    const val NAVIGATION = "2.5.1"
+    const val COIL = "2.1.0"
+    const val VIEW_BINDING_PROPERTY_DELEGATE = "1.5.6"
+}

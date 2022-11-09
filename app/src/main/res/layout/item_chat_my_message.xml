@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivTongue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:visibility="gone"
+        android:src="@drawable/ic_message_tongue_right" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_8">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/shape_message"
+            android:backgroundTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/ivReadStatus"
+            app:layout_constraintStart_toStartOf="@id/tvMessage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Anymaster.Styles.MaterialTextView.Regular.14"
+            android:id="@+id/tvMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="@dimen/size_80"
+            android:paddingEnd="@dimen/spacing_16"
+            android:paddingStart="@dimen/spacing_14"
+            android:paddingTop="@dimen/spacing_10"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintWidth_max="@dimen/size_280"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Hi Daniel, my name Eleni, I am a professional cleaner with 10 years of expirience. I can come to you tomorrow morning. 2 bedroom apartment costs 30 euros and takes about 3 hours. Is it okay for you?" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivReadStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_read"
+            android:layout_marginTop="@dimen/spacing_minus_4"
+            android:paddingHorizontal="@dimen/spacing_6"
+            android:layout_marginBottom="@dimen/spacing_10"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvMessage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/Anymaster.Styles.MaterialTextView.Regular.12"
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_gray"
+            app:layout_goneMarginTop="@dimen/spacing_minus_4"
+            app:layout_goneMarginBottom="@dimen/spacing_10"
+            app:layout_goneMarginEnd="@dimen/spacing_6"
+            app:layout_constraintEnd_toStartOf="@id/ivReadStatus"
+            app:layout_constraintBottom_toBottomOf="@id/ivReadStatus"
+            app:layout_constraintTop_toTopOf="@id/ivReadStatus"
+            tools:text="12:32" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
